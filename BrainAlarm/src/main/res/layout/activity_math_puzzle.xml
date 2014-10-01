@@ -1,0 +1,135 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.jamesrichford.brainalarm.puzzles.MathPuzzle">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:id="@+id/equation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true"
+            android:textColor="#33b5e5"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:text="Equation" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+
+            <TextView
+                android:id="@+id/solution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:textColor="#33b5e5"
+                android:textStyle="bold"
+                android:textSize="50sp"
+                android:gravity="center"
+                android:text="0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textSize="30sp"
+                android:onClick="delete"
+                android:text="X"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight=".70">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25">
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="1"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="2"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="3"/>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25">
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="4"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="5"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="6"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25">
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="7"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="8"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="9"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25">
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="negate"
+                        android:text="+/-"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="input"
+                        android:text="0"/>
+                    <Button
+                        style="@style/MathButton"
+                        android:onClick="decimalise"
+                        android:text="."/>
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                style="@style/MathButton"
+                android:onClick="submit"
+                android:text="OK"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
